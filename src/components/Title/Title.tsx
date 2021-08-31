@@ -17,7 +17,6 @@ const Title = (props: ITitle) => {
 const style: CSSProperties = {
   color: '#403F45',
   fontSize: '40px',
-  textAlign: 'center',
 };
 
 export default Title;

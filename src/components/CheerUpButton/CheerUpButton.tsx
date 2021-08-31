@@ -23,6 +23,7 @@ const style: CSSProperties = {
   height: '96px',
   fontSize: '36px',
   borderRadius: '10px',
+  cursor: 'pointer',
 };
 
 export default CheerUpButton;
