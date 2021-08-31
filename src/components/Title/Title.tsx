@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+
 interface ITitle {
   className: string;
 }
@@ -5,7 +7,17 @@ interface ITitle {
 const Title = (props: ITitle) => {
   const { className } = props;
 
-  return <div className={className}>Do you feel sad today?</div>;
+  return (
+    <div className={className} style={style}>
+      Do you feel sad today?
+    </div>
+  );
+};
+
+const style: CSSProperties = {
+  color: '#403F45',
+  fontSize: '40px',
+  textAlign: 'center',
 };
 
 export default Title;
