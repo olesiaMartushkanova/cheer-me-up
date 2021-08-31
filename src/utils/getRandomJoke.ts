@@ -16,7 +16,7 @@ export const getRandomJoke = async () => {
   try {
     const joke = await sendRequestToGetJoke();
     console.log('jokes: ', joke.data.value);
-    return joke;
+    return joke.data.value as string;
   } catch (error) {
     throw Error(`Couldn't get a joke, try again please... ${error}`);
   }
