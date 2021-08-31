@@ -1,15 +1,14 @@
 interface ICheerUpButton {
-  text: string;
   className: string;
   onClick: any;
 }
 
 const CheerUpButton = (props: ICheerUpButton) => {
-  const { text, className, onClick } = props;
+  const { className, onClick } = props;
 
   return (
     <button className={className} onClick={onClick}>
-      {text}
+      Yes, cheer me up
     </button>
   );
 };

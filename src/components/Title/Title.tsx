@@ -1,12 +1,11 @@
 interface ITitle {
   className: string;
-  text: string;
 }
 
 const Title = (props: ITitle) => {
-  const { className, text } = props;
+  const { className } = props;
 
-  return <div className={className}>{text}</div>;
+  return <div className={className}>Do you feel sad today?</div>;
 };
 
 export default Title;
