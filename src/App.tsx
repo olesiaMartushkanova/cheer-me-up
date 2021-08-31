@@ -1,5 +1,6 @@
 import { CSSProperties, useState } from 'react';
 import { css } from '@emotion/css';
+import Chuck from './utils/chuck_norris.png';
 
 import CheerUpButton from './components/CheerUpButton/CheerUpButton';
 import Joke from './components/Joke/Joke';
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <div style={appStyle}>
+      <img src={Chuck} style={{ width: '200px', height: 'auto' }} />
       <Title
         className={css`
            {
