@@ -1,4 +1,9 @@
 import axios, { AxiosResponse } from 'axios';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
+
+const apiKey = process.env.REACT_APP_API_KEY;
 
 const sendRequestToGetJoke = async (): Promise<AxiosResponse> =>
   await axios({
@@ -7,7 +12,7 @@ const sendRequestToGetJoke = async (): Promise<AxiosResponse> =>
     headers: {
       'accept': 'application/json',
       'x-rapidapi-host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com',
-      'x-rapidapi-key': 'bfbfaf1b5dmsh852b7e1e39d4f53p17082fjsnd489c0ca2eba',
+      'x-rapidapi-key': apiKey,
     },
     params: { query: '<REQUIRED>' },
   });
