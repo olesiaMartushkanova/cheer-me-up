@@ -2,7 +2,7 @@
 
 It returns jokes and funny facts about Chuck Norris to cheer you up when you feel sad:
 
-![](public/Chuck.png)
+![](public/Chuck2.png)
 
 ## Run the project on your local
 
