@@ -1,17 +1,13 @@
 import { CSSProperties } from 'react';
 
 interface ITitle {
-  className: string;
+  text: string;
 }
 
 const Title = (props: ITitle) => {
-  const { className } = props;
+  const { text } = props;
 
-  return (
-    <div className={className} style={style}>
-      Do you feel sad today?
-    </div>
-  );
+  return <div style={style}>{text}</div>;
 };
 
 const style: CSSProperties = {

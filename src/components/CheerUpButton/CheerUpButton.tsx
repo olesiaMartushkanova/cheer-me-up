@@ -1,15 +1,14 @@
 import { CSSProperties } from 'react';
 
 interface ICheerUpButton {
-  className: string;
   onClick: any;
 }
 
 const CheerUpButton = (props: ICheerUpButton) => {
-  const { className, onClick } = props;
+  const { onClick } = props;
 
   return (
-    <button className={className} onClick={onClick} style={style}>
+    <button onClick={onClick} style={style}>
       Yes, cheer me up
     </button>
   );

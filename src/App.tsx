@@ -1,5 +1,4 @@
 import { CSSProperties, useState } from 'react';
-import { css } from '@emotion/css';
 import Chuck from './utils/chuck_norris.png';
 
 import CheerUpButton from './components/CheerUpButton/CheerUpButton';
@@ -9,23 +8,22 @@ import { getRandomJoke } from './utils/getRandomJoke';
 
 const App = () => {
   const [joke, setJoke] = useState('');
+  const [text, setText] = useState('Do you feel sad today?');
 
   const onClickHandler = async () => {
     const jokeFromResponse = await getRandomJoke();
     setJoke(jokeFromResponse);
+    setText('Still sad?');
   };
 
   return (
     <div style={appStyle}>
-      <img src={Chuck} style={{ width: '200px', height: 'auto' }} />
-      <Title
-        className={css`
-           {
-            margin-top: 30px;
-          }
-        `}
+      <img
+        src={Chuck}
+        style={{ width: '200px', height: 'auto', marginBottom: '20px' }}
       />
-      <CheerUpButton className='button__cheer-up' onClick={onClickHandler} />
+      <Title text={text} />
+      <CheerUpButton onClick={onClickHandler} />
       <Joke text={joke} />
     </div>
   );

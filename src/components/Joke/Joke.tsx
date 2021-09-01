@@ -13,6 +13,7 @@ const Joke = (props: IJoke) => {
 const style: CSSProperties = {
   color: '#403F45',
   fontSize: '30px',
+  marginTop: '30px',
 };
 
 export default Joke;
