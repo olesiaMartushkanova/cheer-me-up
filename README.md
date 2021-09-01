@@ -1,8 +1,12 @@
-# Simple Cheer me up application
+# Simple Cheer-me-up application
 
-It returns jokes and funny facts about Chuck Norris to cheer you up when you feel sad:
+Cheer-me-up returns jokes and funny facts about Chuck Norris to cheer you up when you feel sad:
 
 ![](public/Chuck2.png)
+
+## The idea
+
+This app is an example of integration API with React components.
 
 ## Run the project on your local
 
