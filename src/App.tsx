@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { CSSProperties, useState } from 'react';
+import Chuck from './utils/chuck_norris.png';
 
-function App() {
+import CheerUpButton from './components/CheerUpButton/CheerUpButton';
+import Joke from './components/Joke/Joke';
+import Title from './components/Title/Title';
+import { getRandomJoke } from './utils/getRandomJoke';
+
+const App = () => {
+  const [joke, setJoke] = useState('');
+  const [text, setText] = useState('Do you feel sad today?');
+
+  const onClickHandler = async () => {
+    const jokeFromResponse = await getRandomJoke();
+    setJoke(jokeFromResponse);
+    setText('Still sad?');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={appStyle}>
+      <img
+        src={Chuck}
+        style={{ width: '200px', height: 'auto', marginBottom: '20px' }}
+      />
+      <Title text={text} />
+      <CheerUpButton onClick={onClickHandler} />
+      <Joke text={joke} />
     </div>
   );
-}
+};
+
+const appStyle: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  flexWrap: 'wrap',
+  marginTop: '30px',
+  alignItems: 'center',
+  justifyContent: 'center',
+  textAlign: 'center',
+};
 
 export default App;
