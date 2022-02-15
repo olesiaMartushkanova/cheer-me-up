@@ -1,6 +1,6 @@
 # Simple Cheer-me-up application
 
-[Cheer-me-up returns](https://olesiamartushkanova.github.io/cheer-me-up/) jokes and funny facts about Chuck Norris to cheer you up when you feel sad:
+Cheer-me-up returns jokes and funny facts about Chuck Norris to cheer you up when you feel sad:
 
 ![](public/Chuck2.png)
 
